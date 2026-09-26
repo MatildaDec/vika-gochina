@@ -2,235 +2,164 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>VIKA | Go China — учеба и поступление в Китай</title>
-  <meta name="description" content="VIKA | Go China — помощь с поступлением в Китай: бакалавриат, магистратура, гранты, языковой год и лагеря."/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>VIKA | Go China</title>
+  <meta name="description" content="Поступление и учеба в Китае: индивидуальные маршруты, сопровождение и жизнь в Китае вместе с VIKA | Go China."/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-  <header class="nav">
-    <a class="logo" href="#top">VIKA <i>Go China</i></a>
-    <nav class="navlinks">
-      <a href="#route">Как поступать</a>
-      <a href="#formats">Форматы</a>
-      <a href="#vika">О Вике</a>
+  <div class="noise"></div>
+  <header class="site-header">
+    <a class="brand" href="#top"><span>VIKA</span><small>Go China</small></a>
+    <nav class="desktop-nav">
+      <a href="#route" data-i18n="nav_route">Поступление</a>
+      <a href="#formats" data-i18n="nav_formats">Форматы</a>
+      <a href="#prices" data-i18n="nav_prices">Пакеты</a>
+      <a href="#cases" data-i18n="nav_cases">Кейсы</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <a class="navcta" href="https://t.me/china_go_consultation" target="_blank" rel="noopener">Консультация ↗</a>
+    <div class="header-actions">
+      <div class="lang-switch">
+        <button class="lang-btn active" data-lang="ru">RU</button><span>/</span><button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <a class="header-cta" href="https://t.me/china_go_consultation" target="_blank" rel="noopener" data-i18n="consultation">Консультация ↗</a>
+    </div>
   </header>
 
   <main id="top">
-    <section class="hero paper">
-      <div class="hero-bg-word">CHINA</div>
-      <div class="tiny-cn left-cn">我<br>爱<br>中<br>国</div>
-      <div class="hero-main">
-        <p class="kicker">VIKA | GO CHINA</p>
-        <h1>Хочу учиться<br>в Китае.</h1>
-        <p class="hero-note">Тогда сначала не выбираем «первый попавшийся вуз». Разбираем твою ситуацию и ищем маршрут под тебя.</p>
-        <div class="hero-buttons">
-          <a class="btn red" href="https://t.me/china_go_consultation" target="_blank" rel="noopener">Записаться на бесплатную консультацию ↗</a>
-          <a class="btn line" href="#route">Как это работает</a>
+    <section class="hero">
+      <div class="hero-ambient hero-ambient--1"></div><div class="hero-ambient hero-ambient--2"></div>
+      <div class="hero-cn hero-cn--a">中国</div><div class="hero-cn hero-cn--b">杭州</div>
+      <div class="hero-copy">
+        <p class="eyebrow">VIKA | GO CHINA · STUDY · EXPLORE · GROW</p>
+        <h1 data-i18n="hero_title">Китай ближе,<br><em>чем кажется.</em></h1>
+        <p class="hero-lead" data-i18n="hero_lead">Учёба, гранты, языковые программы и жизнь в Китае. Сначала разбираем твою ситуацию — потом строим маршрут под тебя.</p>
+        <div class="hero-actions">
+          <a class="pill pill--primary" href="https://t.me/china_go_consultation" target="_blank" rel="noopener" data-i18n="hero_cta">Записаться на консультацию ↗</a>
+          <a class="pill pill--ghost" href="#route" data-i18n="hero_secondary">Смотреть маршрут ↓</a>
         </div>
       </div>
 
-      <div class="poster p1">
-        <div class="poster-label">HANGZHOU</div>
-        <div class="poster-img temple-img"></div>
-        <div class="poster-footer">杭州 · STUDY / LIFE / CHINA</div>
+      <div class="hero-stage" id="heroStage">
+        <div class="arch arch--back"></div><div class="arch arch--front"></div><div class="sun-disc"></div>
+        <div class="vika-card hero-vika"><div class="vika-placeholder"><span>VIKA</span><small data-i18n="photo_note">сюда ставим ночное фото Вики</small></div></div>
+        <div class="glass-orb orb--1"></div><div class="glass-orb orb--2"></div><div class="seal">留学</div>
+        <div class="floating-label floating-label--1">HANGZHOU</div><div class="floating-label floating-label--2">EN / 中文</div>
       </div>
+      <div class="hero-bottom"><span data-i18n="hero_bottom">START YOUR ROUTE</span><span>↓</span></div>
+    </section>
 
-      <div class="poster p2">
-        <div class="p2-cn">你好</div>
-        <div class="p2-big">GO<br>CHINA</div>
-        <div class="p2-small">study without random choices</div>
-      </div>
+    <div class="marquee"><div class="marquee-track"><span>STUDY • EXPLORE • GROW • 学习 • 生活 • CHINA • HANGZHOU •</span><span>STUDY • EXPLORE • GROW • 学习 • 生活 • CHINA • HANGZHOU •</span></div></div>
 
-      <div class="poster p3">
-        <div class="mountain-img"></div>
-        <div class="p3-copy">从梦想<br>到中国</div>
-      </div>
-
-      <div class="ticket ticket1">杭州 → 你的大学</div>
-      <div class="ticket ticket2">English / 中文</div>
-
-      <div class="hero-strip">
-        <span>БАКАЛАВРИАТ</span><b>✦</b><span>МАГИСТРАТУРА</span><b>✦</b><span>ГРАНТЫ</span><b>✦</b><span>ЯЗЫКОВОЙ ГОД</span><b>✦</b><span>ЛАГЕРЯ</span>
+    <section class="intro section-shell">
+      <div class="intro-left"><p class="section-index">00</p><h2 data-i18n="intro_title">Я хочу<br>учиться<br>в Китае.</h2></div>
+      <div class="intro-questions">
+        <p data-i18n="q1">Но где?</p><p data-i18n="q2">На каком языке?</p><p data-i18n="q3">Платно или на гранте?</p><p data-i18n="q4">Нужен ли HSK?</p><p data-i18n="q5">Какой город выбрать?</p>
+        <div class="intro-answer" data-i18n="intro_answer">Вот с этого мы и начинаем.</div>
       </div>
     </section>
 
-    <section id="route" class="route">
-      <div class="section-title">
-        <p class="kicker">01 / путь</p>
-        <h2>От «хочу в Китай»<br>до понятного плана.</h2>
+    <section id="route" class="route section-shell">
+      <div class="section-heading">
+        <div><p class="section-index">01 / ROUTE</p><h2 data-i18n="route_title">От идеи<br>до Китая.</h2></div>
+        <p class="section-copy" data-i18n="route_copy">Путь не обязан выглядеть одинаково для всех. Но в нём должны быть понятные шаги и логика.</p>
       </div>
-
-      <div class="route-grid">
-        <article class="route-step blue">
-          <span>01</span>
-          <h3>Разбираем тебя</h3>
-          <p>Оценки, достижения, английский и китайский, HSK, бюджет, сроки и что вообще хочется получить от учебы.</p>
-        </article>
-        <article class="route-step cream">
-          <span>02</span>
-          <h3>Смотрим варианты</h3>
-          <p>На английском или китайском, платно, со скидкой, с грантом, языковой год или лагерь.</p>
-        </article>
-        <article class="route-step yellow">
-          <span>03</span>
-          <h3>Собираем маршрут</h3>
-          <p>Что делать сейчас, какие документы понадобятся, какие дедлайны критичны и куда логичнее подаваться.</p>
-        </article>
-        <article class="route-step redbox">
-          <span>04</span>
-          <h3>Не бросаем после созвона</h3>
-          <p>Если идем дальше вместе — сопровождаем по выбранному формату и держим фокус на реальном результате.</p>
-        </article>
+      <div class="route-visual">
+        <div class="route-line"><div class="route-progress" id="routeProgress"></div></div><div class="route-marker" id="routeMarker">行</div>
+        <article class="route-step"><span class="route-num">01</span><div><h3 data-i18n="route_1_title">Знакомимся</h3><p data-i18n="route_1_text">Оценки, документы, язык, бюджет, планы и ожидания от учёбы.</p></div></article>
+        <article class="route-step"><span class="route-num">02</span><div><h3 data-i18n="route_2_title">Строим маршрут</h3><p data-i18n="route_2_text">Выбираем язык обучения, уровень программы, город и стратегию подачи.</p></div></article>
+        <article class="route-step"><span class="route-num">03</span><div><h3 data-i18n="route_3_title">Готовим документы</h3><p data-i18n="route_3_text">Анкеты, CV, мотивационные письма и пакет документов под требования программ.</p></div></article>
+        <article class="route-step"><span class="route-num">04</span><div><h3 data-i18n="route_4_title">Подаёмся</h3><p data-i18n="route_4_text">Контролируем заявки, дедлайны, интервью и коммуникацию с университетами.</p></div></article>
+        <article class="route-step"><span class="route-num">05</span><div><h3 data-i18n="route_5_title">Китай</h3><p data-i18n="route_5_text">Разбираемся с результатом и следующими шагами перед поездкой.</p></div></article>
       </div>
     </section>
 
-    <section id="formats" class="formats paper">
-      <div class="formats-head">
-        <p class="kicker">02 / что можно выбрать</p>
-        <h2>Не один сценарий<br>для всех.</h2>
-        <p>В Китае можно учиться на английском или китайском. Условия сильно зависят от программы, вуза и твоего профиля.</p>
-      </div>
-
-      <div class="format-stack">
-        <article class="format-card f-red">
-          <div class="num">01</div>
-          <div>
-            <h3>Бакалавриат</h3>
-            <p>Программы на английском или китайском. Платное обучение, скидки и грантовые варианты.</p>
-          </div>
-          <div class="cnmark">本科</div>
-        </article>
-        <article class="format-card f-blue">
-          <div class="num">02</div>
-          <div>
-            <h3>Магистратура</h3>
-            <p>Англоязычные и китайскоязычные программы, исследовательские и практические треки.</p>
-          </div>
-          <div class="cnmark">硕士</div>
-        </article>
-        <article class="format-card f-green">
-          <div class="num">03</div>
-          <div>
-            <h3>Языковой год</h3>
-            <p>Пожить в Китае, выучить язык в среде и понять, подходит ли тебе страна до основной программы.</p>
-          </div>
-          <div class="cnmark">汉语</div>
-        </article>
-        <article class="format-card f-yellow">
-          <div class="num">04</div>
-          <div>
-            <h3>Образовательные лагеря</h3>
-            <p>Зимние, весенние и летние программы для разных возрастов, в том числе при университетах.</p>
-          </div>
-          <div class="cnmark">夏令营</div>
-        </article>
+    <section id="formats" class="formats">
+      <div class="formats-head section-shell"><p class="section-index">02 / FORMATS</p><h2 data-i18n="formats_title">Китай может быть<br><em>разным.</em></h2></div>
+      <div class="format-grid">
+        <article class="format-tile format-tile--photo format-language"><div class="format-overlay"></div><span class="format-kicker">LANGUAGE</span><h3 data-i18n="format_language">Языковой год</h3><p data-i18n="format_language_text">Погрузиться в среду, подтянуть китайский и подготовиться к следующему этапу.</p></article>
+        <article class="format-tile format-tile--cream"><span class="format-kicker">BACHELOR</span><h3 data-i18n="format_bachelor">Бакалавриат</h3><p data-i18n="format_bachelor_text">Программы на английском и китайском, разные города и варианты финансирования.</p><span class="tile-cn">本科</span></article>
+        <article class="format-tile format-tile--red"><span class="format-kicker">MASTER</span><h3 data-i18n="format_master">Магистратура</h3><p data-i18n="format_master_text">Треки для продолжения образования, грантовых стратегий и карьерных целей.</p><span class="tile-cn">硕士</span></article>
+        <article class="format-tile format-tile--photo format-camps"><div class="format-overlay"></div><span class="format-kicker">SHORT PROGRAMS</span><h3 data-i18n="format_camps">Лагеря и short programs</h3><p data-i18n="format_camps_text">Короткие образовательные поездки, чтобы увидеть Китай и университетскую среду изнутри.</p></article>
       </div>
     </section>
 
-    <section id="vika" class="vika">
-      <div class="vika-art">
-        <div class="vika-sun"></div>
-        <div class="vika-photo-placeholder">
-          <span>V</span>
-          <small>сюда поставим<br>фото Вики</small>
-        </div>
-        <div class="hand-note">Chelyabinsk →<br>Hangzhou</div>
-      </div>
-      <div class="vika-copy">
-        <p class="kicker">03 / Вика</p>
-        <h2>Не «эксперт из интернета», а человек, который сам уехал учиться в Китай.</h2>
-        <p>Вика заканчивает бакалавриат в Китае и живет в Ханчжоу. Ее путь начался еще в школе: китайский клуб, самостоятельные занятия, иероглифы в тетрадях между обычными уроками — а потом уже настоящий план поступления.</p>
-        <p>Поэтому здесь не будет одинаковой инструкции для всех. Один человек приходит с HSK, другой — только с английским, у кого-то сильные оценки, у кого-то важен бюджет. Сначала разбираем исходные данные — потом предлагаем маршрут.</p>
-        <div class="quote">«Мне важно, чтобы человек понимал, что с ним происходит на каждом этапе.»</div>
+    <section id="vika" class="about section-shell">
+      <div class="about-photo-wrap"><div class="about-photo"><div class="vika-placeholder vika-placeholder--day"><span>V</span><small data-i18n="photo_day">сюда ставим дневное фото Вики</small></div></div><div class="about-stamp">CHELYABINSK → HANGZHOU</div></div>
+      <div class="about-copy">
+        <p class="section-index">03 / VIKA</p><h2>VIKA</h2>
+        <p class="about-big" data-i18n="about_big">Не «эксперт из интернета», а человек, который сам однажды собирал документы и уезжал учиться в Китай.</p>
+        <p data-i18n="about_text">Китай начался с дополнительных занятий в школе, самостоятельного изучения языка и идеи «а что, если реально поступить?». Сейчас Вика заканчивает бакалавриат в Китае и живёт в Ханчжоу.</p>
+        <div class="facts"><div><strong>4+</strong><span data-i18n="fact_1">лет в теме Китая</span></div><div><strong>杭州</strong><span data-i18n="fact_2">Hangzhou</span></div><div><strong>RU / EN / 中文</strong><span data-i18n="fact_3">разные маршруты обучения</span></div></div>
       </div>
     </section>
 
-    <section class="moodboard">
-      <div class="mood m1">
-        <div class="mood-img city-img"></div>
-        <span>HANGZHOU</span>
-        <strong>ЖИТЬ</strong>
+    <section class="visual-break">
+      <div class="visual-card vc-1"><span>STUDY</span></div><div class="visual-card vc-2"><span>EXPLORE</span></div><div class="visual-card vc-3"><span>GROW</span></div>
+      <div class="visual-center">学习<br>生活<br>中国</div>
+    </section>
+
+    <section id="prices" class="prices section-shell">
+      <div class="section-heading">
+        <div><p class="section-index">04 / PACKAGES</p><h2 data-i18n="prices_title">Выбираем не тариф.<br><em>Выбираем маршрут.</em></h2></div>
+        <p class="section-copy" data-i18n="prices_note">Цены пока временные — сейчас нам важнее собрать структуру и визуальный язык сайта.</p>
       </div>
-      <div class="mood m2">
-        <span>CHILL</span>
-        <strong>УЧИТЬСЯ</strong>
-        <small>кампус, язык, друзья, бытовые мелочи — настоящая жизнь в Китае</small>
-      </div>
-      <div class="mood m3">
-        <div class="mood-img street-img"></div>
-        <span>CHINA</span>
-        <strong>ПРОБОВАТЬ</strong>
+      <div class="price-grid">
+        <article class="price-card"><div class="price-top"><span>01</span><span>LANGUAGE START</span></div><h3>100 000 ₽</h3><p data-i18n="price_language_desc">Для языковых программ и первого погружения в Китай.</p><ul><li data-i18n="price_li_1">Стартовая консультация</li><li data-i18n="price_li_2">Подбор вариантов</li><li data-i18n="price_li_3">Документы и заявки</li><li data-i18n="price_li_4">Сопровождение</li></ul><a href="https://t.me/china_go_consultation" target="_blank" rel="noopener" data-i18n="choose">Обсудить ↗</a></article>
+        <article class="price-card price-card--accent"><div class="price-top"><span>02</span><span>BACHELOR TRACK</span></div><h3>100 000 ₽</h3><p data-i18n="price_bachelor_desc">Для поступления на бакалавриат на английском или китайском языке.</p><ul><li data-i18n="price_li_1">Стартовая консультация</li><li data-i18n="price_li_5">Стратегия поступления</li><li data-i18n="price_li_3">Документы и заявки</li><li data-i18n="price_li_6">Контроль дедлайнов</li></ul><a href="https://t.me/china_go_consultation" target="_blank" rel="noopener" data-i18n="choose">Обсудить ↗</a></article>
+        <article class="price-card"><div class="price-top"><span>03</span><span>MASTER / GRANT</span></div><h3>100 000 ₽</h3><p data-i18n="price_master_desc">Для магистратуры и маршрутов, где важна стратегия подачи на финансирование.</p><ul><li data-i18n="price_li_7">Разбор профиля</li><li data-i18n="price_li_8">Грантовая стратегия</li><li data-i18n="price_li_9">Усиление заявки</li><li data-i18n="price_li_4">Сопровождение</li></ul><a href="https://t.me/china_go_consultation" target="_blank" rel="noopener" data-i18n="choose">Обсудить ↗</a></article>
+        <article class="price-card price-card--dark"><div class="price-top"><span>04</span><span>INDIVIDUAL</span></div><h3>00000 ₽</h3><p data-i18n="price_individual_desc">Для нестандартных ситуаций, лагерей и коротких программ.</p><ul><li data-i18n="price_li_10">Индивидуальный сценарий</li><li data-i18n="price_li_11">Гибкий состав услуги</li><li data-i18n="price_li_12">Под задачу и сроки</li></ul><a href="https://t.me/china_go_consultation" target="_blank" rel="noopener" data-i18n="choose">Обсудить ↗</a></article>
       </div>
     </section>
 
-    <section class="consult">
-      <div class="consult-copy">
-        <p class="kicker light">04 / бесплатная консультация</p>
-        <h2>Не знаешь, что тебе подходит? Это нормально.</h2>
-        <p>На созвоне ориентируем по условиям, примерным расходам, языку обучения, грантам и следующим шагам. А потом уже говорим, какой вариант выглядит логичнее именно для тебя.</p>
-      </div>
-
-      <div class="consult-card">
-        <p class="smallcap">FREE CALL · INDIVIDUAL</p>
-        <ul>
-          <li>оценки и достижения</li>
-          <li>HSK / английский / китайский</li>
-          <li>бюджет</li>
-          <li>уровень программы</li>
-          <li>сроки и документы</li>
-        </ul>
-        <a class="btn red wide" href="https://t.me/china_go_consultation" target="_blank" rel="noopener">Написать Вике ↗</a>
-        <small>Мы не ведем длинную переписку вместо консультации — созваниваемся и разбираем ситуацию нормально.</small>
+    <section class="mini-quiz">
+      <div class="mini-quiz-copy"><p class="section-index">05 / QUICK ROUTE</p><h2 data-i18n="quiz_title">Не знаешь,<br>что тебе нужно?</h2></div>
+      <div class="quiz-panel">
+        <div class="quiz-row"><span data-i18n="quiz_q1">Что хочешь?</span><div><button>Бакалавриат</button><button>Магистратура</button><button>Язык</button><button>Пока не знаю</button></div></div>
+        <div class="quiz-row"><span data-i18n="quiz_q2">На каком языке?</span><div><button>English</button><button>中文</button><button>Пока не знаю</button></div></div>
+        <div class="quiz-row"><span data-i18n="quiz_q3">Есть HSK?</span><div><button>Да</button><button>Нет</button></div></div>
+        <a id="quizCta" href="https://t.me/china_go_consultation" target="_blank" rel="noopener" data-i18n="quiz_cta">Обсудить мой маршрут ↗</a>
       </div>
     </section>
 
-    <section id="faq" class="faq paper">
-      <div class="section-title">
-        <p class="kicker">05 / вопросы</p>
-        <h2>До созвона обычно<br>спрашивают это.</h2>
+    <section id="cases" class="cases section-shell">
+      <div class="section-heading"><div><p class="section-index">06 / CASES</p><h2>Different people.<br><em>Different routes.</em></h2></div><p class="section-copy" data-i18n="cases_note">Пока это демонстрационные кейсы для дизайна. Позже заменим их на реальные истории.</p></div>
+      <div class="case-list">
+        <article class="case-card"><div class="case-head"><span>CASE 01</span><span>18 / MOSCOW</span></div><h3 data-i18n="case1_title">Без HSK → языковой год</h3><p data-i18n="case1_text">Китайский почти с нуля, но есть желание начать путь именно в Китае.</p><div class="case-route">LANGUAGE YEAR → HSK → BACHELOR</div></article>
+        <article class="case-card"><div class="case-head"><span>CASE 02</span><span>20 / KAZAN</span></div><h3 data-i18n="case2_title">English Bachelor</h3><p data-i18n="case2_text">Хороший английский и сильные оценки, но нет китайского и списка университетов.</p><div class="case-route">PROFILE → PROGRAMS → APPLICATION</div></article>
+        <article class="case-card"><div class="case-head"><span>CASE 03</span><span>22 / SPB</span></div><h3 data-i18n="case3_title">Grant Route</h3><p data-i18n="case3_text">Цель — магистратура с финансированием и несколько сценариев подачи.</p><div class="case-route">MASTER → FUNDING → INTERVIEW</div></article>
+        <article class="case-card"><div class="case-head"><span>CASE 04</span><span>?</span></div><h3 data-i18n="case4_title">«Я вообще не знаю, чего хочу»</h3><p data-i18n="case4_text">Начинаем не с вуза, а с вопросов: специальность, бюджет, язык и формат жизни.</p><div class="case-route">CONSULTATION → STRATEGY → ROUTE</div></article>
       </div>
+    </section>
+
+    <section class="china-life">
+      <div class="life-title"><p class="section-index">07 / LIFE</p><h2 data-i18n="life_title">Не только поступить.<br><em>Жить.</em></h2></div>
+      <div class="life-track"><figure class="life-card lc-1"><figcaption>HANGZHOU</figcaption></figure><figure class="life-card lc-2"><figcaption>CAMPUS</figcaption></figure><figure class="life-card lc-3"><figcaption>NIGHT CHINA</figcaption></figure><figure class="life-card lc-4"><figcaption>EVERYDAY LIFE</figcaption></figure></div>
+    </section>
+
+    <section id="faq" class="faq section-shell">
+      <div class="faq-title"><p class="section-index">08 / FAQ</p><h2>QUESTIONS?</h2></div>
       <div class="faq-list">
-        <details>
-          <summary>Можно поступить без китайского?</summary>
-          <p>Да, есть программы на английском языке. Для китайскоязычных программ требования к языку зависят от конкретного университета и программы.</p>
-        </details>
-        <details>
-          <summary>Если у меня нет HSK?</summary>
-          <p>Это не означает, что Китай закрыт. Смотрим англоязычные программы или вариант языкового года — в зависимости от твоей цели.</p>
-        </details>
-        <details>
-          <summary>Есть ли полные гранты?</summary>
-          <p>Есть разные типы финансирования: скидки, частичные и полные гранты. Возможность зависит от вуза, программы и профиля кандидата.</p>
-        </details>
-        <details>
-          <summary>Я вообще не понимаю, какой вуз выбирать.</summary>
-          <p>Это как раз нормальная стартовая точка. Сначала определяем критерии и ограничения, а уже после этого сравниваем университеты.</p>
-        </details>
+        <details><summary data-i18n="faq1_q">Можно поступить без HSK?</summary><p data-i18n="faq1_a">Да. Есть англоязычные программы, а также языковые маршруты для тех, кто пока только начинает китайский.</p></details>
+        <details><summary data-i18n="faq2_q">Можно учиться полностью на английском?</summary><p data-i18n="faq2_a">Да, в Китае есть программы бакалавриата и магистратуры на английском языке.</p></details>
+        <details><summary data-i18n="faq3_q">Есть гранты?</summary><p data-i18n="faq3_a">Есть разные варианты финансирования, но решение зависит от требований программы и конкурса.</p></details>
+        <details><summary data-i18n="faq4_q">Когда начинать поступление?</summary><p data-i18n="faq4_a">Чем раньше, тем спокойнее можно собрать документы и выбрать стратегию. Точные сроки зависят от программы.</p></details>
+        <details><summary data-i18n="faq5_q">Если я пока не выбрал специальность?</summary><p data-i18n="faq5_a">Это нормальная стартовая точка. На консультации можно сначала определить направление и ограничения.</p></details>
       </div>
     </section>
 
-    <section class="final">
-      <p class="kicker light">VIKA | GO CHINA</p>
-      <div class="final-row">
-        <h2>Может,<br>твой Китай<br>начинается здесь.</h2>
-        <a class="go" href="https://t.me/china_go_consultation" target="_blank" rel="noopener">GO ↗</a>
-      </div>
+    <section class="final-cta">
+      <div class="final-bg-word">CHINA</div>
+      <div class="final-copy"><p class="eyebrow">VIKA | GO CHINA</p><h2 data-i18n="final_title">Готов<br>к Китаю?</h2><p data-i18n="final_text">Начни с разговора. Без универсального шаблона — сначала разберём твою ситуацию.</p></div>
+      <a class="final-go" href="https://t.me/china_go_consultation" target="_blank" rel="noopener">GO ↗</a>
+      <div class="final-vika"><div class="vika-placeholder"><span>V</span><small>VIKA</small></div></div>
     </section>
   </main>
 
-  <footer>
-    <div>VIKA | Go China</div>
-    <a href="https://t.me/china_go_consultation" target="_blank" rel="noopener">@china_go_consultation</a>
-    <div>© <span id="year"></span></div>
-  </footer>
-
+  <footer><div>VIKA | Go China</div><a href="https://t.me/china_go_consultation" target="_blank" rel="noopener">@china_go_consultation</a><div>© <span id="year"></span></div></footer>
   <script src="script.js"></script>
 </body>
 </html>
