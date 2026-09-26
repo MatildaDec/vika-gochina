@@ -88,3 +88,33 @@ window.addEventListener('scroll',function(){
   const p=Math.max(0,Math.min(1,(window.innerHeight-r.top)/(r.height+window.innerHeight)));
   lifeTrack.style.transform='translateX('+(-max*p)+'px)';
 },{passive:true});
+
+
+/* 3D pointer interaction */
+function attachTilt(selector, maxX, maxY){
+  document.querySelectorAll(selector).forEach(function(el){
+    el.addEventListener('mousemove',function(e){
+      if(window.innerWidth<900)return;
+      const r=el.getBoundingClientRect();
+      const px=(e.clientX-r.left)/r.width-.5;
+      const py=(e.clientY-r.top)/r.height-.5;
+      el.style.transform='translateY(-7px) rotateX('+(-py*maxX)+'deg) rotateY('+(px*maxY)+'deg)';
+    });
+    el.addEventListener('mouseleave',function(){ el.style.transform=''; });
+  });
+}
+attachTilt('.price-card',4,5);
+attachTilt('.format-tile',3,4);
+
+const visualBreak=document.querySelector('.visual-break');
+if(visualBreak){
+  window.addEventListener('scroll',function(){
+    const r=visualBreak.getBoundingClientRect();
+    const p=Math.max(-1,Math.min(1,(window.innerHeight/2-(r.top+r.height/2))/window.innerHeight));
+    document.querySelectorAll('.visual-card').forEach(function(card,i){
+      const depth=[18,-12,26][i]||10;
+      const rot=[-3,4,2][i]||0;
+      card.style.transform='translateY('+(p*depth)+'px) rotate('+rot+'deg) translateZ('+(20+i*14)+'px)';
+    });
+  },{passive:true});
+}
