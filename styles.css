@@ -21,3 +21,49 @@
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .75s ease,transform .75s ease}.reveal.show{opacity:1;transform:none}
 @media(max-width:1000px){.desktop-nav{display:none}.hero{height:1100px}.hero-copy{top:10%;width:80vw}.hero-stage{width:86vw;right:-20vw;top:42%;height:56%}.hero-copy h1{font-size:92px}.hero-cn--a{left:65%}.hero-cn--b{display:none}.intro{grid-template-columns:1fr}.intro-questions{padding-top:0}.section-heading{grid-template-columns:1fr}.route-visual{padding-left:14vw}.format-grid{grid-template-columns:1fr;grid-template-rows:repeat(4,460px)}.format-tile{border-right:0}.about{grid-template-columns:1fr}.about-photo{height:680px}.facts{grid-template-columns:1fr 1fr 1fr}.price-grid{grid-template-columns:1fr}.mini-quiz{grid-template-columns:1fr}.case-card{grid-template-columns:130px 1fr}.case-card p{grid-column:2}.case-route{grid-column:2}.life-card{width:52vw}.faq{grid-template-columns:1fr}.final-copy{width:70%}.final-vika{right:4vw;width:36vw}}
 @media(max-width:640px){.site-header{height:68px;padding:0 16px}.brand span{font-size:27px}.brand small{display:none}.header-actions{gap:10px}.header-cta{padding:10px 12px}.section-shell{padding-left:18px;padding-right:18px}.hero{height:940px}.hero-copy{left:18px;right:18px;top:9%;width:auto}.hero-copy h1{font-size:68px}.hero-lead{font-size:16px}.hero-actions{flex-direction:column;align-items:stretch}.pill{width:100%}.hero-stage{top:48%;right:-20vw;width:105vw;height:47%}.vika-card{right:23%;width:46%;height:68%}.arch--front{right:14%;width:62%}.arch--back{right:4%;width:75%}.sun-disc{width:42vw;height:42vw}.floating-label--1{right:42%}.floating-label--2{right:5%}.intro{padding-top:90px;padding-bottom:90px}.intro h2{font-size:74px}.intro-questions p{font-size:28px}.route{padding-top:90px;padding-bottom:100px}.section-heading h2,.formats-head h2,.mini-quiz h2,.life-title h2,.faq-title h2{font-size:62px}.route-visual{padding-left:55px;margin-top:70px}.route-line{left:16px}.route-marker{left:-6px}.route-step{grid-template-columns:50px 1fr;gap:16px}.route-step h3{font-size:45px}.formats{padding-top:90px}.formats-head{padding:0 18px 40px}.format-grid{grid-template-rows:repeat(4,400px)}.format-tile{padding:22px}.format-tile h3{font-size:54px}.about{padding-top:90px;padding-bottom:90px}.about-photo{height:520px;padding:20px}.about-stamp{right:-8px}.about-copy h2{font-size:112px}.about-big{font-size:36px}.facts{grid-template-columns:1fr}.visual-break{height:720px}.vc-1{width:58%;height:52%;left:2%}.vc-2{width:50%;height:44%;right:2%;top:18%}.vc-3{width:64%;height:38%;left:20%}.visual-center{font-size:78px}.prices{padding-top:90px;padding-bottom:100px}.price-card{min-height:460px}.price-card h3{font-size:62px;margin-top:55px}.mini-quiz-copy,.quiz-panel{padding:60px 18px}.case-card{grid-template-columns:1fr;gap:14px}.case-card p,.case-route{grid-column:auto}.case-card h3{font-size:46px}.life-card{width:78vw;height:450px}.faq{padding-top:90px;padding-bottom:100px}.final-cta{min-height:760px;padding:80px 18px}.final-copy{width:82%}.final-copy h2{font-size:82px}.final-go{width:125px;height:125px;right:18px;bottom:35px;font-size:28px}.final-vika{right:-10vw;top:26%;width:58vw;height:46%;opacity:.22}footer{flex-direction:column;gap:8px;padding:22px 18px}}
+
+
+/* --- 3D / depth pass --- */
+.hero-stage{transform-style:preserve-3d}
+.arch--back{transform:translateZ(-80px) rotateY(-8deg) rotateX(3deg) rotate(4deg)}
+.arch--front{transform:translateZ(-20px) rotateY(8deg) rotateX(-2deg) rotate(-2deg)}
+.sun-disc{transform:translateZ(-120px)}
+.hero-vika{transform-style:preserve-3d;will-change:transform}
+.orb--1{transform:translateZ(90px);animation:orbFloat1 5.8s ease-in-out infinite}
+.orb--2{transform:translateZ(55px);animation:orbFloat2 4.8s ease-in-out infinite}
+.seal{transform:translateZ(75px) rotate(9deg);box-shadow:0 18px 38px rgba(0,0,0,.18)}
+.floating-label--1{transform:translateZ(60px) rotate(-7deg)}
+.floating-label--2{transform:translateZ(40px) rotate(5deg)}
+@keyframes orbFloat1{0%,100%{translate:0 0}50%{translate:0 -16px}}
+@keyframes orbFloat2{0%,100%{translate:0 0}50%{translate:9px 11px}}
+
+.format-grid{perspective:1400px}
+.format-tile{transform-style:preserve-3d;will-change:transform,box-shadow;transition:transform .35s ease,box-shadow .35s ease}
+.format-tile:hover{transform:translateY(-7px) rotateX(1.4deg) rotateY(-1.2deg) scale(.995);box-shadow:0 28px 55px rgba(61,35,31,.15);z-index:4}
+.format-tile h3,.format-tile p,.format-kicker{transform:translateZ(26px)}
+.tile-cn{transform:translateZ(12px)}
+
+.price-grid{perspective:1400px}
+.price-card{transform-style:preserve-3d;will-change:transform,box-shadow;transition:transform .35s ease,box-shadow .35s ease}
+.price-card:hover{transform:translateY(-10px) rotateX(2deg) rotateY(-1.3deg);box-shadow:0 30px 60px rgba(60,31,27,.16)}
+.price-card>*{transform:translateZ(16px)}
+
+.case-list{perspective:1200px}
+.case-card{transform-style:preserve-3d}
+.case-card:hover{transform:translateX(12px) rotateY(-1.5deg);box-shadow:0 20px 45px rgba(70,40,30,.08)}
+
+.visual-card{will-change:transform;transform-style:preserve-3d;transition:filter .3s ease,box-shadow .3s ease}
+.visual-card:hover{filter:saturate(1.08) contrast(1.03);box-shadow:0 45px 75px rgba(0,0,0,.32)}
+
+.about-photo{perspective:1100px}
+.about-photo .vika-placeholder{transform-style:preserve-3d;transition:transform .35s ease}
+.about-photo:hover .vika-placeholder{transform:rotateY(-4deg) rotateX(1deg) scale(1.015)}
+
+.final-go{box-shadow:0 20px 50px rgba(0,0,0,.18)}
+.final-go:hover{box-shadow:0 30px 70px rgba(0,0,0,.24)}
+.final-vika{transform:perspective(900px) rotateY(-7deg);transform-origin:center right}
+
+@media (prefers-reduced-motion: reduce){
+  .orb--1,.orb--2{animation:none}
+  .format-tile,.price-card,.case-card,.hero-vika,.hero-stage{transition:none!important}
+}
