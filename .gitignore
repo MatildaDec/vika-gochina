@@ -1,0 +1,5 @@
+node_modules/
+.preview/
+.sites-preview/
+dist/
+*.zip

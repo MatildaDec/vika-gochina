@@ -1,15 +1,7 @@
-# VIKA | Go China
+# VIKA · Go China
 
-Одностраничный сайт проекта VIKA | Go China — поступление и учеба в Китае.
+Responsive study-in-China landing page with Russian and English versions, four program cards, accessible dialogs and a Telegram consultation draft.
 
-## Локальный запуск
-Откройте `index.html` в браузере.
+Run `npm run dev` with Node.js. Build with `npm run build`; no dependencies are required.
 
-## GitHub Pages
-В репозитории: **Settings → Pages → Deploy from a branch → main / root**.
-
-После этого сайт будет доступен по адресу:
-`https://matildadec.github.io/vika-gochina/`
-
-## Контакты
-CTA ведут на Telegram: @china_go_consultation
+This public draft uses neutral brand artwork and general project copy. The complete portrait and biography version remains local while publication approval is pending. Student routes are illustrative; verified testimonials have not been supplied.

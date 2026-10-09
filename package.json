@@ -1,0 +1,11 @@
+{
+  "name": "vika-gochina",
+  "version": "2.0.0",
+  "private": true,
+  "description": "VIKA · Go China — international student admissions",
+  "scripts": {
+    "dev": "node tools/serve.mjs",
+    "build": "node tools/build.mjs",
+    "check": "node --check script.js"
+  }
+}
