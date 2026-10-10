@@ -2,7 +2,7 @@
 
 [Открыть сайт](https://matildadec.github.io/vika-gochina/) · [Сразу к карточкам отзывов](https://matildadec.github.io/vika-gochina/#reviews)
 
-Responsive study-in-China landing page with Russian and English versions, four program cards, accessible dialogs and a Telegram consultation draft.
+Responsive study-in-China landing page with Russian and English versions, four standalone program pages and a free consultation draft in Telegram.
 
 Run `npm run dev` with Node.js. Build with `npm run build`; no dependencies are required.
 
@@ -19,3 +19,12 @@ GitHub Pages publishes from `main` / root. All asset paths are relative, so the 
 5. Сохраните изменения в `main`. GitHub Pages опубликует новую версию автоматически.
 
 Student routes are illustrative and review cards are clearly marked templates; verified testimonials have not been supplied. The about section includes the approved Vika portrait and personal story.
+
+## Страницы программ
+
+- [Языковой год](https://matildadec.github.io/vika-gochina/language-year.html)
+- [Бакалавриат](https://matildadec.github.io/vika-gochina/bachelor.html)
+- [Магистратура](https://matildadec.github.io/vika-gochina/master.html)
+- [Лагеря и короткие программы](https://matildadec.github.io/vika-gochina/short-programs.html)
+
+Кнопки консультации со страниц программ открывают главную с выбранной программой в форме. Все страницы поддерживают RU/EN.
