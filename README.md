@@ -18,4 +18,4 @@ GitHub Pages publishes from `main` / root. All asset paths are relative, so the 
 4. Удалите элемент `.review-template` с надписью «ШАБЛОН» после заполнения карточки. Когда реальные отзывы будут добавлены, обновите пояснение под заголовком секции.
 5. Сохраните изменения в `main`. GitHub Pages опубликует новую версию автоматически.
 
-Student routes are illustrative and review cards are clearly marked templates; verified testimonials have not been supplied. The public version uses neutral brand artwork and general project copy.
+Student routes are illustrative and review cards are clearly marked templates; verified testimonials have not been supplied. The about section includes the approved Vika portrait and personal story.
