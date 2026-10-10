@@ -1,120 +1,72 @@
-document.getElementById('year').textContent = new Date().getFullYear();
-
-const translations = {
-  ru: {
-    nav_route:'Поступление',nav_formats:'Форматы',nav_prices:'Пакеты',nav_cases:'Кейсы',consultation:'Консультация ↗',
-    hero_title:'Китай ближе,<br><em>чем кажется.</em>',hero_lead:'Учёба, гранты, языковые программы и жизнь в Китае. Сначала разбираем твою ситуацию — потом строим маршрут под тебя.',hero_cta:'Записаться на консультацию ↗',hero_secondary:'Смотреть маршрут ↓',photo_note:'сюда ставим ночное фото Вики',hero_bottom:'START YOUR ROUTE',
-    intro_title:'Я хочу<br>учиться<br>в Китае.',q1:'Но где?',q2:'На каком языке?',q3:'Платно или на гранте?',q4:'Нужен ли HSK?',q5:'Какой город выбрать?',intro_answer:'Вот с этого мы и начинаем.',
-    route_title:'От идеи<br>до Китая.',route_copy:'Путь не обязан выглядеть одинаково для всех. Но в нём должны быть понятные шаги и логика.',route_1_title:'Знакомимся',route_1_text:'Оценки, документы, язык, бюджет, планы и ожидания от учёбы.',route_2_title:'Строим маршрут',route_2_text:'Выбираем язык обучения, уровень программы, город и стратегию подачи.',route_3_title:'Готовим документы',route_3_text:'Анкеты, CV, мотивационные письма и пакет документов под требования программ.',route_4_title:'Подаёмся',route_4_text:'Контролируем заявки, дедлайны, интервью и коммуникацию с университетами.',route_5_title:'Китай',route_5_text:'Разбираемся с результатом и следующими шагами перед поездкой.',
-    formats_title:'Китай может быть<br><em>разным.</em>',format_language:'Языковой год',format_language_text:'Погрузиться в среду, подтянуть китайский и подготовиться к следующему этапу.',format_bachelor:'Бакалавриат',format_bachelor_text:'Программы на английском и китайском, разные города и варианты финансирования.',format_master:'Магистратура',format_master_text:'Треки для продолжения образования, грантовых стратегий и карьерных целей.',format_camps:'Лагеря и short programs',format_camps_text:'Короткие образовательные поездки, чтобы увидеть Китай и университетскую среду изнутри.',
-    photo_day:'сюда ставим дневное фото Вики',about_big:'Не «эксперт из интернета», а человек, который сам однажды собирал документы и уезжал учиться в Китай.',about_text:'Китай начался с дополнительных занятий в школе, самостоятельного изучения языка и идеи «а что, если реально поступить?». Сейчас Вика заканчивает бакалавриат в Китае и живёт в Ханчжоу.',fact_1:'лет в теме Китая',fact_2:'Hangzhou',fact_3:'разные маршруты обучения',
-    prices_title:'Выбираем не тариф.<br><em>Выбираем маршрут.</em>',prices_note:'Цены пока временные — сейчас нам важнее собрать структуру и визуальный язык сайта.',price_language_desc:'Для языковых программ и первого погружения в Китай.',price_bachelor_desc:'Для поступления на бакалавриат на английском или китайском языке.',price_master_desc:'Для магистратуры и маршрутов, где важна стратегия подачи на финансирование.',price_individual_desc:'Для нестандартных ситуаций, лагерей и коротких программ.',price_li_1:'Стартовая консультация',price_li_2:'Подбор вариантов',price_li_3:'Документы и заявки',price_li_4:'Сопровождение',price_li_5:'Стратегия поступления',price_li_6:'Контроль дедлайнов',price_li_7:'Разбор профиля',price_li_8:'Грантовая стратегия',price_li_9:'Усиление заявки',price_li_10:'Индивидуальный сценарий',price_li_11:'Гибкий состав услуги',price_li_12:'Под задачу и сроки',choose:'Обсудить ↗',
-    quiz_title:'Не знаешь,<br>что тебе нужно?',quiz_q1:'Что хочешь?',quiz_q2:'На каком языке?',quiz_q3:'Есть HSK?',quiz_cta:'Обсудить мой маршрут ↗',
-    cases_note:'Пока это демонстрационные кейсы для дизайна. Позже заменим их на реальные истории.',case1_title:'Без HSK → языковой год',case1_text:'Китайский почти с нуля, но есть желание начать путь именно в Китае.',case2_title:'English Bachelor',case2_text:'Хороший английский и сильные оценки, но нет китайского и списка университетов.',case3_title:'Grant Route',case3_text:'Цель — магистратура с финансированием и несколько сценариев подачи.',case4_title:'«Я вообще не знаю, чего хочу»',case4_text:'Начинаем не с вуза, а с вопросов: специальность, бюджет, язык и формат жизни.',
-    life_title:'Не только поступить.<br><em>Жить.</em>',faq1_q:'Можно поступить без HSK?',faq1_a:'Да. Есть англоязычные программы, а также языковые маршруты для тех, кто пока только начинает китайский.',faq2_q:'Можно учиться полностью на английском?',faq2_a:'Да, в Китае есть программы бакалавриата и магистратуры на английском языке.',faq3_q:'Есть гранты?',faq3_a:'Есть разные варианты финансирования, но решение зависит от требований программы и конкурса.',faq4_q:'Когда начинать поступление?',faq4_a:'Чем раньше, тем спокойнее можно собрать документы и выбрать стратегию. Точные сроки зависят от программы.',faq5_q:'Если я пока не выбрал специальность?',faq5_a:'Это нормальная стартовая точка. На консультации можно сначала определить направление и ограничения.',final_title:'Готов<br>к Китаю?',final_text:'Начни с разговора. Без универсального шаблона — сначала разберём твою ситуацию.'
-  },
-  en: {
-    nav_route:'Admissions',nav_formats:'Programs',nav_prices:'Packages',nav_cases:'Cases',consultation:'Consultation ↗',
-    hero_title:'China is closer<br><em>than you think.</em>',hero_lead:'Study, scholarships, language programs and life in China. We start with your profile and build a route around you.',hero_cta:'Book a consultation ↗',hero_secondary:'See the route ↓',photo_note:'Vika night photo goes here',hero_bottom:'START YOUR ROUTE',
-    intro_title:'I want<br>to study<br>in China.',q1:'But where?',q2:'In which language?',q3:'Self-funded or scholarship?',q4:'Do I need HSK?',q5:'Which city should I choose?',intro_answer:'That is exactly where we start.',
-    route_title:'From idea<br>to China.',route_copy:'No two admissions routes have to look the same. But every route needs clear logic and clear steps.',route_1_title:'Meet & assess',route_1_text:'Grades, documents, language, budget, goals and expectations.',route_2_title:'Build the route',route_2_text:'Choose the study language, degree level, city and application strategy.',route_3_title:'Prepare documents',route_3_text:'Applications, CV, motivation letters and the document package.',route_4_title:'Apply',route_4_text:'Track applications, deadlines, interviews and university communication.',route_5_title:'China',route_5_text:'Review the result and prepare for the next steps before departure.',
-    formats_title:'China can look<br><em>different.</em>',format_language:'Language year',format_language_text:'Immerse yourself, improve Chinese and prepare for the next stage.',format_bachelor:'Bachelor',format_bachelor_text:'English- and Chinese-taught programs, different cities and funding options.',format_master:'Master',format_master_text:'Routes for further education, scholarships and career goals.',format_camps:'Camps & short programs',format_camps_text:'Short educational trips to experience China and university life from the inside.',
-    photo_day:'Vika day photo goes here',about_big:'Not an “internet expert”, but someone who once collected the same documents and moved to China to study.',about_text:'China started with extra classes at school, self-study and a simple thought: “what if I actually apply?” Today Vika is finishing her bachelor’s degree in China and lives in Hangzhou.',fact_1:'years around China',fact_2:'Hangzhou',fact_3:'different study routes',
-    prices_title:'Not a tariff.<br><em>A route.</em>',prices_note:'Prices are placeholders for now — the priority is the structure and design system.',price_language_desc:'For language programs and your first immersion in China.',price_bachelor_desc:'For bachelor admissions in English or Chinese.',price_master_desc:'For master’s admissions and funding-focused strategies.',price_individual_desc:'For non-standard situations, camps and short programs.',price_li_1:'Kick-off consultation',price_li_2:'Program shortlist',price_li_3:'Documents & applications',price_li_4:'Ongoing support',price_li_5:'Admissions strategy',price_li_6:'Deadline tracking',price_li_7:'Profile review',price_li_8:'Scholarship strategy',price_li_9:'Application positioning',price_li_10:'Custom scenario',price_li_11:'Flexible scope',price_li_12:'Built around your timeline',choose:'Discuss ↗',
-    quiz_title:'Not sure<br>what you need?',quiz_q1:'What do you want?',quiz_q2:'Study language?',quiz_q3:'Do you have HSK?',quiz_cta:'Discuss my route ↗',
-    cases_note:'These are design demo cases for now. We will replace them with real stories later.',case1_title:'No HSK → language year',case1_text:'Chinese is almost zero, but the goal is to start the journey in China.',case2_title:'English Bachelor',case2_text:'Strong English and grades, but no Chinese and no university shortlist.',case3_title:'Grant Route',case3_text:'The goal is a funded master’s degree with several application scenarios.',case4_title:'“I have no idea what I want”',case4_text:'We start with the questions: subject, budget, language and lifestyle.',
-    life_title:'Not only to study.<br><em>To live.</em>',faq1_q:'Can I apply without HSK?',faq1_a:'Yes. There are English-taught programs and language routes for students just starting Chinese.',faq2_q:'Can I study fully in English?',faq2_a:'Yes. China has English-taught bachelor’s and master’s programs.',faq3_q:'Are scholarships available?',faq3_a:'There are different funding options, but decisions depend on program requirements and competition.',faq4_q:'When should I start applying?',faq4_a:'The earlier you start, the calmer the preparation. Exact timelines depend on the program.',faq5_q:'What if I have not chosen a major yet?',faq5_a:'That is a normal starting point. A consultation can first define direction and constraints.',final_title:'READY<br>FOR CHINA?',final_text:'Start with a conversation. No universal template — first we understand your situation.'
-  }
+'use strict';
+const telegramBase = 'https://t.me/china_go_consultation';
+const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+let language = 'ru', draftMessage = '', activeProgram = null;
+const translations = [...document.querySelectorAll('[data-en]')].map(element => ({element, ru:element.innerHTML, en:element.dataset.en}));
+const placeholders = [...document.querySelectorAll('[data-placeholder-en]')].map(element => ({element, ru:element.placeholder, en:element.dataset.placeholderEn}));
+const menuButton = document.querySelector('.menu-toggle'), mobileNav = document.getElementById('mobile-nav'), dialog = document.getElementById('program-dialog');
+const track = document.getElementById('story-track'), previousStory = document.getElementById('story-prev'), nextStory = document.getElementById('story-next');
+const floatingCTA = document.querySelector('.floating-cta'), formResult = document.getElementById('form-result'), formStatus = document.getElementById('form-status'), draftLink = document.getElementById('telegram-draft'), copyButton = document.getElementById('copy-message');
+const programs = {
+language:{kicker:'01 / LANGUAGE YEAR',ru:{title:'Языковой год',intro:'Для тех, кто хочет погрузиться в среду, учить китайский в Китае и подготовиться к следующему этапу.',items:['Обсудим твой уровень языка и цель поездки.','Рассмотрим города и подходящие языковые программы.','Разберём документы, сроки и следующие шаги.']},en:{title:'Language year',intro:'Immerse yourself in China, study the language and prepare for the next stage.',items:['Discuss your language level and goals.','Explore cities and suitable programs.','Review documents, timelines and next steps.']}},
+bachelor:{kicker:'02 / BACHELOR’S DEGREE',ru:{title:'Бакалавриат',intro:'Первое высшее образование в Китае — с выбором направления, языка обучения и города под твои планы.',items:['Разберём школьное образование, оценки и язык.','Сравним программы на английском и китайском.','Рассмотрим финансирование и стратегию подачи.']},en:{title:'Bachelor’s degree',intro:'Your first degree in China, with a major, study language and city chosen around your goals.',items:['Review your education, grades and languages.','Compare English- and Chinese-taught programs.','Explore funding and an application strategy.']}},
+master:{kicker:'03 / MASTER’S DEGREE',ru:{title:'Магистратура',intro:'Следующий этап образования — с учётом диплома, академического опыта и карьерных целей.',items:['Разберём твой профиль и желаемое направление.','Подберём программы и варианты финансирования.','Обсудим документы, мотивационное письмо и подачу.']},en:{title:'Master’s degree',intro:'Your next stage of education, taking your degree, academic background and career goals into account.',items:['Review your background and desired field.','Shortlist programs and funding options.','Discuss documents, motivation letters and applications.']}},
+short:{kicker:'04 / CAMPS & SHORT PROGRAMS',ru:{title:'Лагеря и short programs',intro:'Короткая образовательная поездка, чтобы познакомиться с Китаем и университетской средой.',items:['Обсудим возраст, интересы и даты поездки.','Рассмотрим доступные форматы и города.','Разберём условия участия и подготовку к поездке.']},en:{title:'Camps & short programs',intro:'A short educational trip to experience China and university life from the inside.',items:['Discuss your age, interests and travel dates.','Explore available formats and cities.','Review participation requirements and travel preparation.']}}
 };
-
-document.querySelectorAll('.lang-btn').forEach(function(btn){
-  btn.addEventListener('click',function(){
-    const lang=btn.dataset.lang;
-    document.documentElement.lang=lang;
-    document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('active',b===btn);});
-    document.querySelectorAll('[data-i18n]').forEach(function(el){
-      const key=el.dataset.i18n;
-      if(translations[lang][key]) el.innerHTML=translations[lang][key];
-    });
-  });
-});
-
-const revealEls=document.querySelectorAll('.route-step,.format-tile,.price-card,.case-card,.faq details,.facts div');
-revealEls.forEach(function(el){el.classList.add('reveal');});
-const io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target);}});},{threshold:.12});
-revealEls.forEach(function(el){io.observe(el);});
-
-const questionEls=[].slice.call(document.querySelectorAll('.intro-questions p'));
-const qObserver=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('active');});},{threshold:.65});
-questionEls.forEach(function(el){qObserver.observe(el);});
-
-const route=document.querySelector('.route-visual');
-const progress=document.getElementById('routeProgress');
-const marker=document.getElementById('routeMarker');
-function updateRoute(){
-  if(!route)return;
-  const r=route.getBoundingClientRect();
-  const vh=window.innerHeight;
-  const total=r.height;
-  const start=vh*.55;
-  let p=(start-r.top)/total;
-  p=Math.max(0,Math.min(1,p));
-  progress.style.height=(p*100)+'%';
-  marker.style.top='calc('+(p*100)+'% - 23px)';
+function renderProgram(key){
+ const program=programs[key]; if(!program)return; const content=program[language];
+ document.getElementById('dialog-kicker').textContent=program.kicker; document.getElementById('dialog-title').textContent=content.title; document.getElementById('dialog-intro').textContent=content.intro;
+ document.getElementById('dialog-list').replaceChildren(...content.items.map(text=>{const item=document.createElement('li');item.textContent=text;return item;}));
+ document.getElementById('dialog-note').textContent=language==='ru'?'Требования, доступность и стоимость зависят от программы. Обсудим их на консультации.':'Requirements, availability and costs depend on the program. We’ll discuss them in your consultation.';
 }
-window.addEventListener('scroll',updateRoute,{passive:true});updateRoute();
-
-const stage=document.getElementById('heroStage');
-window.addEventListener('mousemove',function(e){
-  if(!stage||window.innerWidth<900)return;
-  const x=(e.clientX/window.innerWidth-.5),y=(e.clientY/window.innerHeight-.5);
-  stage.style.transform='translate3d('+(x*10)+'px,'+(y*8)+'px,0)';
-  const v=stage.querySelector('.hero-vika');
-  if(v)v.style.transform='translate3d('+(x*-14)+'px,'+(y*-10)+'px,20px)';
-});
-
-document.querySelectorAll('.quiz-row button').forEach(function(btn){
-  btn.addEventListener('click',function(){
-    const group=btn.parentElement;group.querySelectorAll('button').forEach(function(b){b.classList.remove('selected');});btn.classList.add('selected');
-  });
-});
-
-const lifeTrack=document.querySelector('.life-track');
-const lifeSection=document.querySelector('.china-life');
-window.addEventListener('scroll',function(){
-  if(!lifeTrack||!lifeSection||window.innerWidth<760)return;
-  const r=lifeSection.getBoundingClientRect();
-  const max=Math.max(0,lifeTrack.scrollWidth-window.innerWidth+100);
-  const p=Math.max(0,Math.min(1,(window.innerHeight-r.top)/(r.height+window.innerHeight)));
-  lifeTrack.style.transform='translateX('+(-max*p)+'px)';
-},{passive:true});
-
-
-/* 3D pointer interaction */
-function attachTilt(selector, maxX, maxY){
-  document.querySelectorAll(selector).forEach(function(el){
-    el.addEventListener('mousemove',function(e){
-      if(window.innerWidth<900)return;
-      const r=el.getBoundingClientRect();
-      const px=(e.clientX-r.left)/r.width-.5;
-      const py=(e.clientY-r.top)/r.height-.5;
-      el.style.transform='translateY(-7px) rotateX('+(-py*maxX)+'deg) rotateY('+(px*maxY)+'deg)';
-    });
-    el.addEventListener('mouseleave',function(){ el.style.transform=''; });
-  });
+function updateMenuLabel(){menuButton.setAttribute('aria-label',menuButton.getAttribute('aria-expanded')==='true'?(language==='ru'?'Закрыть меню':'Close menu'):(language==='ru'?'Открыть меню':'Open menu'));}
+function setLanguage(next){
+ if(!['ru','en'].includes(next))return; language=next; document.documentElement.lang=language;
+ translations.forEach(({element,ru,en})=>{element.innerHTML=language==='en'?en:ru;}); placeholders.forEach(({element,ru,en})=>{element.placeholder=language==='en'?en:ru;});
+ document.querySelectorAll('[data-lang]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.lang===language)));
+ document.title=language==='ru'?'VIKA · Go China — твоё будущее в Китае':'VIKA · Go China — your future in China';
+ const labels=[['.desktop-nav','Основная навигация','Main navigation'],['#mobile-nav','Мобильная навигация','Mobile navigation'],['#story-track','Примеры маршрутов поступления','Illustrative study routes'],['#story-prev','Предыдущие маршруты','Previous routes'],['#story-next','Следующие маршруты','Next routes'],['.dialog-close','Закрыть','Close']];
+ labels.forEach(([selector,ru,en])=>document.querySelector(selector).setAttribute('aria-label',language==='ru'?ru:en)); updateMenuLabel();
+ if(activeProgram)renderProgram(activeProgram); if(draftMessage)updateDraft();
+ try{localStorage.setItem('vika-language',language);}catch{}
+ updateStoryControls();
 }
-attachTilt('.price-card',4,5);
-attachTilt('.format-tile',3,4);
-
-const visualBreak=document.querySelector('.visual-break');
-if(visualBreak){
-  window.addEventListener('scroll',function(){
-    const r=visualBreak.getBoundingClientRect();
-    const p=Math.max(-1,Math.min(1,(window.innerHeight/2-(r.top+r.height/2))/window.innerHeight));
-    document.querySelectorAll('.visual-card').forEach(function(card,i){
-      const depth=[18,-12,26][i]||10;
-      const rot=[-3,4,2][i]||0;
-      card.style.transform='translateY('+(p*depth)+'px) rotate('+rot+'deg) translateZ('+(20+i*14)+'px)';
-    });
-  },{passive:true});
+function closeMenu(){mobileNav.hidden=true;menuButton.setAttribute('aria-expanded','false');updateMenuLabel();}
+document.querySelectorAll('[data-lang]').forEach(button=>button.addEventListener('click',()=>setLanguage(button.dataset.lang)));
+menuButton.addEventListener('click',()=>{const open=menuButton.getAttribute('aria-expanded')!=='true';mobileNav.hidden=!open;menuButton.setAttribute('aria-expanded',String(open));updateMenuLabel();});
+mobileNav.querySelectorAll('a').forEach(link=>link.addEventListener('click',closeMenu));
+document.addEventListener('keydown',event=>{if(event.key==='Escape')closeMenu();});
+matchMedia('(min-width:801px)').addEventListener('change',event=>{if(event.matches)closeMenu();});
+document.querySelectorAll('[data-program]').forEach(button=>button.addEventListener('click',()=>{activeProgram=button.dataset.program;renderProgram(activeProgram);dialog.showModal();document.body.classList.add('dialog-open');}));
+document.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());
+dialog.addEventListener('click',event=>{if(event.target===dialog){const box=dialog.getBoundingClientRect();if(event.clientX<box.left||event.clientX>box.right||event.clientY<box.top||event.clientY>box.bottom)dialog.close();}});
+dialog.addEventListener('close',()=>document.body.classList.remove('dialog-open'));
+document.getElementById('dialog-cta').addEventListener('click',()=>{document.getElementById('program').value=activeProgram;dialog.close();if(draftMessage)updateDraft();});
+function updateStoryControls(){previousStory.disabled=track.scrollLeft<3;nextStory.disabled=track.scrollLeft+track.clientWidth>=track.scrollWidth-3;}
+function slideStories(direction){const card=track.querySelector('.story-card'),gap=parseFloat(getComputedStyle(track).columnGap)||18;track.scrollBy({left:direction*(card.getBoundingClientRect().width+gap),behavior:reducedMotion.matches?'instant':'smooth'});}
+previousStory.addEventListener('click',()=>slideStories(-1));nextStory.addEventListener('click',()=>slideStories(1));track.addEventListener('scroll',updateStoryControls,{passive:true});
+track.addEventListener('keydown',event=>{if(['ArrowRight','ArrowLeft'].includes(event.key)){event.preventDefault();slideStories(event.key==='ArrowRight'?1:-1);}});
+new ResizeObserver(updateStoryControls).observe(track);
+const form=document.getElementById('consultation-form');
+function updateDraft(){
+ const name=document.getElementById('name').value.trim(),program=document.getElementById('program').selectedOptions[0].textContent,message=document.getElementById('message').value.trim();
+ draftMessage=language==='ru'?'Привет, Вика! Меня зовут '+name+'. Хочу записаться на консультацию по поступлению в Китай.\n\nИнтересует: '+program+'.'+(message?'\n\nО себе: '+message:''):'Hi Vika! My name is '+name+'. I’d like to book a consultation about studying in China.\n\nI’m interested in: '+program+'.'+(message?'\n\nAbout me: '+message:'');
+ draftLink.href=telegramBase+'?text='+encodeURIComponent(draftMessage);
+ formStatus.textContent=language==='ru'?'Черновик готов. Отправь его Вике в Telegram, чтобы договориться о времени. Если черновик не появился, скопируй сообщение.':'Your draft is ready. Send it to Vika in Telegram to arrange a time. If the draft doesn’t appear, copy the message.';
+ copyButton.textContent=language==='ru'?'Скопировать сообщение':'Copy message';
 }
+form.addEventListener('submit',event=>{event.preventDefault();const name=document.getElementById('name');if(!name.value.trim()){name.setCustomValidity(language==='ru'?'Напиши своё имя.':'Please enter your name.');name.reportValidity();return;}name.setCustomValidity('');if(!form.reportValidity())return;updateDraft();formResult.hidden=false;window.open(draftLink.href,'_blank','noopener,noreferrer');});
+form.addEventListener('input',()=>{document.getElementById('name').setCustomValidity('');if(!formResult.hidden)updateDraft();});form.addEventListener('change',()=>{if(!formResult.hidden)updateDraft();});
+copyButton.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(draftMessage);copyButton.textContent=language==='ru'?'Сообщение скопировано ✓':'Message copied ✓';}catch{formStatus.textContent=(language==='ru'?'Скопируй текст вручную:':'Copy this message manually:')+'\n'+draftMessage;formStatus.style.whiteSpace='pre-wrap';}});
+if('IntersectionObserver' in window){
+ const reveals=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('show');entry.target.classList.remove('pending');reveals.unobserve(entry.target);}}),{threshold:.08});
+ document.querySelectorAll('.reveal').forEach(element=>{if(!reducedMotion.matches&&element.getBoundingClientRect().top>innerHeight)element.classList.add('pending');reveals.observe(element);});
+ new IntersectionObserver(([entry])=>floatingCTA.classList.toggle('visible',!entry.isIntersecting)).observe(document.querySelector('.hero'));
+ new IntersectionObserver(([entry])=>{floatingCTA.style.visibility=entry.isIntersecting?'hidden':'';},{threshold:.12}).observe(document.querySelector('.consultation'));
+}else{floatingCTA.classList.add('visible');}
+const pass=document.querySelector('[data-tilt]');
+if(matchMedia('(pointer:fine)').matches&&!reducedMotion.matches){pass.addEventListener('pointermove',event=>{const box=pass.getBoundingClientRect(),x=(event.clientX-box.left)/box.width-.5,y=(event.clientY-box.top)/box.height-.5;pass.style.transform='rotate(-9deg) rotateY('+x*8+'deg) rotateX('+(-y*8)+'deg) translateY(-4px)';});pass.addEventListener('pointerleave',()=>{pass.style.transform='';});}
+document.getElementById('year').textContent=new Date().getFullYear();
+try{setLanguage(localStorage.getItem('vika-language')||'ru');}catch{setLanguage('ru');}
+updateStoryControls();
+
