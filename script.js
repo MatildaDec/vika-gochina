@@ -1,6 +1,7 @@
 'use strict';
 const telegramBase = 'https://t.me/china_go_consultation';
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+const envelopeTrigger=document.querySelector('.envelope-trigger'),grantNote=document.getElementById('grant-note');
 let language = 'ru', draftMessage = '';
 const translations = [...document.querySelectorAll('[data-en]')].map(element => ({element, ru:element.innerHTML, en:element.dataset.en}));
 const placeholders = [...document.querySelectorAll('[data-placeholder-en]')].map(element => ({element, ru:element.placeholder, en:element.dataset.placeholderEn}));
@@ -18,6 +19,7 @@ function setLanguage(next){
  if(draftMessage)updateDraft();
  try{localStorage.setItem('vika-language',language);}catch{}
  updateStoryControls();
+ positionGrantNote();
 }
 function closeMenu(){mobileNav.hidden=true;menuButton.setAttribute('aria-expanded','false');updateMenuLabel();}
 document.querySelectorAll('[data-lang]').forEach(button=>button.addEventListener('click',()=>setLanguage(button.dataset.lang)));
@@ -59,3 +61,17 @@ document.getElementById('year').textContent=new Date().getFullYear();
 try{setLanguage(localStorage.getItem('vika-language')||'ru');}catch{setLanguage('ru');}
 updateStoryControls();
 
+
+function positionGrantNote(){
+ if(!grantNote?.matches(':popover-open'))return;
+ const trigger=envelopeTrigger.getBoundingClientRect(),note=grantNote.getBoundingClientRect(),gap=10,gutter=12;
+ const left=Math.max(gutter,Math.min(trigger.right-note.width,innerWidth-note.width-gutter));
+ const below=trigger.bottom+gap,above=trigger.top-note.height-gap;
+ const top=Math.max(gutter,Math.min(below+note.height<=innerHeight-gutter?below:above,innerHeight-note.height-gutter));
+ grantNote.style.left=left+'px';grantNote.style.top=top+'px';grantNote.style.transform='none';
+}
+if(grantNote){
+ grantNote.addEventListener('toggle',event=>{envelopeTrigger.setAttribute('aria-expanded',String(event.newState==='open'));positionGrantNote();});
+ window.addEventListener('resize',positionGrantNote);
+ window.addEventListener('scroll',positionGrantNote,{passive:true});
+}
