@@ -201,3 +201,26 @@
 .review-card-real .review-details{font-size:11px;line-height:1.6;gap:20px;margin-top:18px;padding-top:14px}
 @media(max-width:800px){.review-card-real{padding:28px}.review-content{grid-template-columns:160px minmax(0,1fr);gap:27px;align-items:start}.review-card-real .review-text{font-size:17px}.review-card-real .review-person h4{font-size:14px}.review-card-real .review-person p{font-size:11px}.review-card-real .review-details{font-size:10px}.review-card-real .review-topic{font-size:8px}}
 @media(max-width:600px){.review-card-real{padding:24px}.review-content{grid-template-columns:1fr;gap:29px;padding-top:25px}.review-portrait{width:170px;justify-self:center}.review-card-real .review-card-top{align-items:flex-start;gap:14px;padding-bottom:20px}.review-card-real .review-topic{max-width:165px;font-size:8px;line-height:1.65}.review-origin{max-width:100px;font-size:8px;line-height:1.65}.review-card-real .review-text{font-size:17px;line-height:1.7}.review-card-real .review-person h4{font-size:14px}.review-card-real .review-details{gap:14px}.review-card-real .review-details>span:last-child{flex:none}}
+
+/* Student portrait with an admission letter on its reverse. */
+.review-photo-flip{position:relative;display:block;width:100%;aspect-ratio:1;border:0;padding:0;border-radius:2px;background:var(--white);cursor:pointer;perspective:1000px}
+.review-photo-inner{position:absolute;inset:0;display:block;transform-style:preserve-3d;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.review-photo-flip[aria-pressed=true] .review-photo-inner{transform:rotateY(180deg)}
+.review-photo-face{position:absolute;inset:0;display:block;background:#fff;backface-visibility:hidden;border-radius:2px;overflow:hidden}
+.review-photo-back{transform:rotateY(180deg)}
+.review-photo-face img{width:100%;height:100%;aspect-ratio:auto}
+.review-photo-back img{object-fit:contain}
+.review-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+.review-flip-back-label{display:none}.review-photo-flip[aria-pressed=true] .review-flip-front-label{display:none}.review-photo-flip[aria-pressed=true] .review-flip-back-label{display:block}
+.review-photo-actions{position:relative;display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:30px;padding:7px 2px 0;background:var(--white);font-size:10px;line-height:1.5;color:var(--muted)}
+.review-admission-zoom{padding:0;border:0;background:none;font-size:10px;font-weight:500;color:var(--deep-red);line-height:1.5;text-decoration:underline;text-underline-offset:3px}
+.review-portrait-flip:not(.is-flipped) .review-admission-zoom{visibility:hidden}
+.admission-dialog{width:min(980px,calc(100vw - 32px));max-height:calc(100dvh - 32px);padding:0;border:1px solid var(--line);border-radius:7px;background:var(--paper);color:var(--ink);overflow:hidden;box-shadow:0 20px 70px #10161060}
+.admission-dialog::backdrop{background:#151b17c9;backdrop-filter:blur(3px)}
+.admission-dialog-header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:17px 22px;border-bottom:1px solid var(--line)}
+.admission-dialog-header h2{font-family:var(--body);font-size:18px;font-weight:500;line-height:1.5;letter-spacing:-.025em}
+.admission-dialog-close{display:grid;place-items:center;flex:none;width:34px;height:34px;padding:0;border:1px solid var(--line);border-radius:4px;background:var(--white);font-size:26px;line-height:1}
+.admission-document-scroll{padding:22px;max-height:calc(100dvh - 112px);overflow:auto;overscroll-behavior:contain}
+.admission-document-scroll img{display:block;width:100%;height:auto;object-fit:contain;background:#fff}
+@media(max-width:540px){.review-photo-actions,.review-admission-zoom{font-size:9px}.admission-dialog{width:calc(100vw - 20px);max-height:calc(100dvh - 20px)}.admission-dialog-header{padding:12px 14px;gap:12px}.admission-dialog-header h2{font-size:15px}.admission-document-scroll{padding:10px;max-height:calc(100dvh - 94px)}}
+@media(prefers-reduced-motion:reduce){.review-photo-inner{transition:none}.review-card-real:hover{transform:none}}

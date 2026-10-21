@@ -75,3 +75,20 @@ if(grantNote){
  window.addEventListener('resize',positionGrantNote);
  window.addEventListener('scroll',positionGrantNote,{passive:true});
 }
+
+// Photo/admission flip and full document viewer.
+document.querySelectorAll('[data-review-flip]').forEach(button=>button.addEventListener('click',()=>{
+ const flipped=button.getAttribute('aria-pressed')!=='true';
+ button.setAttribute('aria-pressed',String(flipped));
+ button.closest('.review-portrait-flip').classList.toggle('is-flipped',flipped);
+}));
+const admissionDialog=document.getElementById('souhail-admission-dialog');
+if(admissionDialog){
+ document.querySelectorAll('[data-admission-open]').forEach(button=>button.addEventListener('click',()=>admissionDialog.showModal()));
+ admissionDialog.querySelector('[data-admission-close]').addEventListener('click',()=>admissionDialog.close());
+ admissionDialog.addEventListener('click',event=>{
+  if(event.target!==admissionDialog)return;
+  const bounds=admissionDialog.getBoundingClientRect();
+  if(event.clientX<bounds.left||event.clientX>bounds.right||event.clientY<bounds.top||event.clientY>bounds.bottom)admissionDialog.close();
+ });
+}
